@@ -1,0 +1,30 @@
+.button {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 141px;
+  background-color: $primary;
+  color: $white;
+  border-radius: 5px;
+
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-top: 15.5px solid transparent;
+    border-bottom: 15px solid transparent;
+  }
+
+  &::before {
+    border-right: 14px solid $primary;
+    left: -11.5px;
+  }
+
+  &::after {
+    border-left: 14px solid $primary;
+    right: -11.5px;
+  }
+}

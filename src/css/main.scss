@@ -1,6 +1,8 @@
-@import 'settings/*.scss';
-@import 'tools/*.scss';
-@import 'elements/*.scss';
-@import 'objects/*.scss';
-@import 'components/*.scss';
-@import 'trumps/*.scss';
+@import 'settings/variables';
+@import 'tools/mixin';
+@import 'elements/global';
+@import 'elements/reset';
+@import 'components/header';
+@import 'components/button';
+@import 'components/mv';
+@import 'trumps/helper';

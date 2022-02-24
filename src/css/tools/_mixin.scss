@@ -10,6 +10,6 @@
   }
 }
 
-@mixin getem($base-font-size, $base-line-height) {
+@function getem($base-font-size, $base-line-height) {
   @return ($base-line-height / $base-font-size) * 1em;
 }
