@@ -1,3 +1,17 @@
 extends includes/layout.pug
 block content
-  | aaaa
+  main.main 
+    .mv__bg 
+      img(src="/img/mv-bg.png" alt="hero bg")
+    section.mv 
+      .mv__content-wrapper
+        .mv__message
+          span.mv__subtitle Worldwide Executive Resourse
+          h1.mv__title 
+            | The Outsource Solution
+            br
+            | for scaling your business
+          p.mv__content 
+            It is a long established fact that a reader will be distracted by the readable content #[br] of a page when looking at its layout. Lorem Ipsum has been the industry's standard dummy text
+        .mv__button-wrapper
+          a.button.mv__button(href="#") The button
