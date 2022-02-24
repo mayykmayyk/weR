@@ -1,0 +1,45 @@
+{
+  "name": "parcel-test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "targets": {
+    "main": false
+  },
+  "scripts": {
+    "watch": "parcel watch ./src/*.pug ./src/js/*.ts ./src/css/main.scss --no-hmr",
+    "watch:ts": "tsc -p . --noEmit --watch",
+    "build": "parcel build --no-minify --no-content-hash ./src/*.pug ./src/js/*.ts ./src/css/main.scss ./src/img/* ./src/img/*/*",
+    "build:all": "concurrently \"yarn:build\" \"node replace.js\"",
+    "lint:js": "eslint --ext .ts",
+    "lint:style": "stylelint **/*.scss --ignore-path .gitignore",
+    "lint": "yarn lint:js && yarn lint:style",
+    "dev": "concurrently \"yarn:watch\" \"yarn:watch:ts\"  \"live-server ./dist/ --wait=1\" \"node replace.js\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^4.14.0",
+    "@typescript-eslint/parser": "^4.14.0",
+    "autoprefixer": "9.8.6",
+    "babel-core": "^6.26.3",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-preset-env": "^1.7.0",
+    "concurrently": "^5.3.0",
+    "eslint": "^7.18.0",
+    "eslint-config-airbnb-typescript": "^12.0.0",
+    "live-server": "^1.2.1",
+    "parcel": "^2.0.0-nightly.548",
+    "parcel-bundler": "^1.12.4",
+    "postcss": "^8.2.4",
+    "postcss-modules": "^4.0.0",
+    "prettier": "^2.2.1",
+    "pug": "^3.0.0",
+    "sass": "^1.32.5",
+    "stylelint": "^13.9.0",
+    "stylelint-config-prettier": "^8.0.2",
+    "stylelint-config-standard": "^20.0.0",
+    "typescript": "^4.1.3"
+  }
+}
