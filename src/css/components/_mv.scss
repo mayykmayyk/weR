@@ -3,18 +3,23 @@
   overflow: hidden;
   padding: 300px 0 200px;
 
-  &__content {
-    max-width: 920px;
-    width: 100%;
+  &__content-wrapper {
+    max-width: 1380px;
+    width: 90%;
     margin: auto;
   }
 
   &__bg {
-    width: 600px;
+    max-width: 700px;
+    width: 100%;
     position: absolute;
     top: 20px;
     right: 0;
     transform: translateX(30%);
+
+    img {
+      width: 100%;
+    }
   }
 
   &__message {
