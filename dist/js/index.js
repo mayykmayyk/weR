@@ -133,7 +133,8 @@ var flickityInit = function flickityInit() {
   var carousel = new Flickity(service, {
     pageDots: false,
     freeScroll: true,
-    wrapAround: true
+    wrapAround: true,
+    contain: true
   });
 };
 

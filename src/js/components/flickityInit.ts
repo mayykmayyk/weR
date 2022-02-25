@@ -9,6 +9,7 @@ const flickityInit = () => {
     pageDots: false,
     freeScroll: true,
     wrapAround: true,
+    contain: true,
   })
 }
 

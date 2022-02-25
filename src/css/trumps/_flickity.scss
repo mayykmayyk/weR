@@ -6,14 +6,16 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 364px;
+  min-width: fit-content;
+  width: 33.3%;
   height: 392px;
-  margin: 0;
+  @include tablet {
+    width: 100%;
+  }
 }
 
 .carousel-cell > .service__blurb {
-  max-width: 200px;
-  width: 100%;
+  min-width: 200px;
   height: 100px;
 
   & .service__shape {
@@ -52,8 +54,8 @@
 }
 
 .carousel-cell.is-selected > .service__blurb {
+  min-width: 340px;
   max-width: 340px;
-  width: 100%;
   height: 178px;
 
   & .service__shape {
