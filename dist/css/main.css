@@ -501,7 +501,7 @@ div {
   margin-bottom: 49px;
 }
 .contact__form-input {
-  max-width: 500px;
+  max-width: 640px;
   width: 100%;
 }
 .contact__form-input--fullwidth {
@@ -551,6 +551,25 @@ div {
 .contact__button {
   width: 183px;
   font-size: 1.4rem;
+}
+
+.footer {
+  background-color: #F7C663;
+  padding: 55px 0 283px;
+}
+.footer__logo {
+  max-width: 129px;
+  width: 100%;
+  margin-bottom: 42px;
+}
+.footer__logo img {
+  width: 100%;
+}
+.footer__msg-wrapper {
+  font-weight: 900;
+  font-size: 2rem;
+  line-height: 1.2em;
+  letter-spacing: 0.1em;
 }
 
 .content-wrapper {

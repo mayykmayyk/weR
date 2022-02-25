@@ -1,0 +1,20 @@
+.footer {
+  background-color: $primary;
+  padding: 55px 0 283px;
+
+  &__logo {
+    max-width: 129px;
+    width: 100%;
+    margin-bottom: 42px;
+    img {
+      width: 100%;
+    }
+  }
+
+  &__msg-wrapper {
+    font-weight: $heavy;
+    font-size: 2rem;
+    line-height: getem(20, 24);
+    letter-spacing: getem(1000, 100);
+  }
+}
