@@ -17,18 +17,21 @@ const steps = () => {
   })
 
   nextBtn.onclick = () => {
-    content[increment].classList.remove('active');
-    increment++;
-    if (increment < stepItem.length) {
-      stepItem[increment].classList.add('active');
-      content[increment].classList.add('active');
-    } else {
-      for (let i = stepItem.length -1; i > 0; i--) {
-        stepItem[i].classList.remove('active');
-        content[i].classList.remove('active');
-        increment = 0;
+    if (increment < stepItem.length - 1) {
+      content[increment].classList.remove('active');
+      increment++;
+      if (increment < stepItem.length) {
+        stepItem[increment].classList.add('active');
         content[increment].classList.add('active');
       }
+    } else {
+      return
+      // for (let i = stepItem.length -1; i > 0; i--) {
+      //   stepItem[i].classList.remove('active');
+      //   content[i].classList.remove('active');
+      //   increment = 0;
+      //   content[increment].classList.add('active');
+      // }
     }
   }
 

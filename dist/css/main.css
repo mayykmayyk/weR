@@ -455,6 +455,39 @@ div {
   text-align: center;
 }
 
+.why {
+  padding: 55px 0 38px;
+  background-image: url("/why-bg.50dac936.png");
+}
+.why__title {
+  margin-bottom: 52px;
+}
+.why__image {
+  width: 100%;
+  margin-bottom: 55px;
+}
+.why__image img {
+  width: 100%;
+}
+.why__desc {
+  max-width: 800px;
+  width: 100%;
+  margin: auto;
+  text-align: center;
+  font-size: 1.3rem;
+  line-height: 1.6923076923em;
+  letter-spacing: 0.055em;
+  margin-bottom: 48px;
+}
+.why__button-wrapper {
+  display: flex;
+  justify-content: center;
+}
+.why__button {
+  width: 183px;
+  font-size: 1.4rem;
+}
+
 .content-wrapper {
   position: relative;
   max-width: 1380px;
