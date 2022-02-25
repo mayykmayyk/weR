@@ -238,11 +238,140 @@ div {
   font-size: 1.4rem;
 }
 
+.service {
+  padding: 79px 0 133px;
+}
+.service__title {
+  margin-bottom: 58px;
+}
+.service__blurb {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 30px;
+  background-color: #EFD395;
+}
+.service__blurb-icon img {
+  width: 100%;
+}
+.service__name {
+  font-weight: 900;
+  font-size: 2.5rem;
+  line-height: 1.8em;
+  letter-spacing: 0.1em;
+  text-align: center;
+}
+.service__desc {
+  font-size: 1.2rem;
+  line-height: 1.2em;
+  letter-spacing: 0.055em;
+  text-align: center;
+}
+
 .content-wrapper {
   position: relative;
   max-width: 1380px;
   width: 90%;
   margin: auto;
+}
+
+.carousel-cell {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 364px;
+  height: 392px;
+  margin: 0;
+}
+
+.carousel-cell > .service__blurb {
+  max-width: 200px;
+  width: 100%;
+  height: 100px;
+}
+.carousel-cell > .service__blurb .service__shape {
+  position: absolute;
+  display: block;
+  height: 70px;
+  width: 130px;
+  border-radius: 21px;
+  background-color: #EFD395;
+  z-index: -1;
+}
+.carousel-cell > .service__blurb .service__shape:first-of-type {
+  transform: rotate(150deg);
+  top: -40px;
+  left: 2px;
+}
+.carousel-cell > .service__blurb .service__shape:nth-of-type(2) {
+  transform: rotate(30deg);
+  top: -40px;
+  right: 2px;
+}
+.carousel-cell > .service__blurb .service__shape:nth-of-type(3) {
+  transform: rotate(30deg);
+  bottom: -40px;
+  left: 2px;
+}
+.carousel-cell > .service__blurb .service__shape:nth-of-type(4) {
+  transform: rotate(150deg);
+  bottom: -40px;
+  right: 2px;
+}
+
+.carousel-cell.is-selected > .service__blurb {
+  max-width: 340px;
+  width: 100%;
+  height: 178px;
+}
+.carousel-cell.is-selected > .service__blurb .service__shape {
+  position: absolute;
+  display: block;
+  height: 110px;
+  width: 210px;
+  border-radius: 21px;
+  background-color: #EFD395;
+  z-index: -1;
+}
+.carousel-cell.is-selected > .service__blurb .service__shape:first-of-type {
+  transform: rotate(150deg);
+  top: -66px;
+  left: 6px;
+}
+.carousel-cell.is-selected > .service__blurb .service__shape:nth-of-type(2) {
+  transform: rotate(30deg);
+  top: -66px;
+  right: 6px;
+}
+.carousel-cell.is-selected > .service__blurb .service__shape:nth-of-type(3) {
+  transform: rotate(30deg);
+  bottom: -66px;
+  left: 6px;
+}
+.carousel-cell.is-selected > .service__blurb .service__shape:nth-of-type(4) {
+  transform: rotate(150deg);
+  bottom: -66px;
+  right: 6px;
+}
+
+.carousel-cell > .service__blurb > .service__blurb-icon {
+  max-width: 74px;
+}
+
+.carousel-cell.is-selected > .service__blurb > .service__blurb-icon {
+  max-width: 129px;
+}
+
+.carousel-cell > .service__blurb > .service__blurb-content {
+  position: absolute;
+  opacity: 0;
+}
+
+.carousel-cell.carousel-cell.is-selected > .service__blurb > .service__blurb-content {
+  position: relative;
+  opacity: 1;
 }
 
 /*# sourceMappingURL=/main.css.map */

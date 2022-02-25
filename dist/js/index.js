@@ -117,7 +117,28 @@ parcelRequire = (function (modules, cache, entry, globalName) {
   }
 
   return newRequire;
-})({"js/components/forEachPolyfill.ts":[function(require,module,exports) {
+})({"js/components/flickityInit.ts":[function(require,module,exports) {
+"use strict";
+/**
+* Initialize flickity
+*/
+//@ts-nocheck
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var flickityInit = function flickityInit() {
+  var service = document.querySelector('.home-carousel');
+  var carousel = new Flickity(service, {
+    pageDots: false,
+    freeScroll: true,
+    wrapAround: true
+  });
+};
+
+exports.default = flickityInit;
+},{}],"js/components/forEachPolyfill.ts":[function(require,module,exports) {
 "use strict";
 /**
 * Foreach polyfill for browsers
@@ -153,10 +174,13 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
+var flickityInit_1 = __importDefault(require("./components/flickityInit"));
+
 var forEachPolyfill_1 = __importDefault(require("./components/forEachPolyfill"));
 
 document.addEventListener('DOMContentLoaded', function () {
   forEachPolyfill_1.default();
+  flickityInit_1.default();
 }, false);
-},{"./components/forEachPolyfill":"js/components/forEachPolyfill.ts"}]},{},["js/index.ts"], null)
+},{"./components/flickityInit":"js/components/flickityInit.ts","./components/forEachPolyfill":"js/components/forEachPolyfill.ts"}]},{},["js/index.ts"], null)
 //# sourceMappingURL=/js/index.js.map
