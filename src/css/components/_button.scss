@@ -4,27 +4,28 @@
   justify-content: center;
   align-items: center;
   width: 141px;
+  height: 35px;
   background-color: $primary;
   color: $white;
-  border-radius: 5px;
+  border-radius: 10px;
 
   &::before,
   &::after {
     content: '';
     position: absolute;
-    width: 0;
-    height: 0;
-    border-top: 15.5px solid transparent;
-    border-bottom: 15px solid transparent;
+    width: 27px;
+    height: 27px;
+    background-color: $primary;
+    transform: rotate(45deg);
+    border-radius: 5px;
+    top: 4px
   }
 
   &::before {
-    border-right: 14px solid $primary;
-    left: -11.5px;
+    left: -7.5px;
   }
 
   &::after {
-    border-left: 14px solid $primary;
-    right: -11.5px;
+    right: -6.5px;
   }
 }
