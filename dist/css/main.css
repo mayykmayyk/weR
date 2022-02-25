@@ -488,6 +488,71 @@ div {
   font-size: 1.4rem;
 }
 
+.contact {
+  padding: 85px 0 77px;
+}
+.contact__title {
+  margin-bottom: 101px;
+}
+.contact__form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 100px;
+  margin-bottom: 49px;
+}
+.contact__form-input {
+  max-width: 500px;
+  width: 100%;
+}
+.contact__form-input--fullwidth {
+  max-width: 100%;
+}
+.contact__form-input--fullwidth textarea {
+  width: 100%;
+  font-size: 1.3rem;
+  font-family: "Roboto", sans-serif;
+  line-height: 1.6923076923em;
+  letter-spacing: 0.055em;
+  background-color: transparent;
+  border: none;
+  border-bottom: 2px solid #EFD395;
+}
+.contact__form-input--fullwidth textarea::placeholder {
+  opacity: 0.3;
+}
+.contact__form-input--fullwidth textarea:focus {
+  outline: none;
+  border: none;
+  border-bottom: 2px solid #F7C663;
+}
+.contact__form-input input {
+  width: 100%;
+  padding: 0 5px 19px;
+  font-size: 1.3rem;
+  font-family: "Roboto", sans-serif;
+  line-height: 1.6923076923em;
+  letter-spacing: 0.055em;
+  background-color: transparent;
+  border: none;
+  border-bottom: 2px solid #EFD395;
+}
+.contact__form-input input::placeholder {
+  opacity: 0.3;
+}
+.contact__form-input input:focus {
+  outline: none;
+  border: none;
+  border-bottom: 2px solid #F7C663;
+}
+.contact__button-wrapper {
+  display: flex;
+  justify-content: flex-end;
+}
+.contact__button {
+  width: 183px;
+  font-size: 1.4rem;
+}
+
 .content-wrapper {
   position: relative;
   max-width: 1380px;
