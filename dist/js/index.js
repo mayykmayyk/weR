@@ -133,8 +133,7 @@ var flickityInit = function flickityInit() {
   var carousel = new Flickity(service, {
     pageDots: false,
     freeScroll: true,
-    wrapAround: true,
-    contain: true
+    wrapAround: true
   });
 };
 
@@ -162,6 +161,81 @@ var foreachPolyfill = function foreachPolyfill() {
 };
 
 exports.default = foreachPolyfill;
+},{}],"js/components/steps.ts":[function(require,module,exports) {
+"use strict";
+/**
+* script for steps component
+*/
+//@ts-nocheck
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var steps = function steps() {
+  var stepItem = document.querySelectorAll('.step__item');
+  var stepButton = document.querySelectorAll('.step__indicator');
+  var content = document.querySelectorAll('.step__content');
+  var prevBtn = document.querySelector('.js-prev');
+  var nextBtn = document.querySelector('.js-next');
+  var increment = 0;
+  window.addEventListener('DOMContentLoaded', function () {
+    stepItem[0].classList.add('active');
+    content[0].classList.add('active');
+  });
+
+  nextBtn.onclick = function () {
+    content[increment].classList.remove('active');
+    increment++;
+
+    if (increment < stepItem.length) {
+      stepItem[increment].classList.add('active');
+      content[increment].classList.add('active');
+    } else {
+      for (var i = stepItem.length - 1; i > 0; i--) {
+        stepItem[i].classList.remove('active');
+        content[i].classList.remove('active');
+        increment = 0;
+        content[increment].classList.add('active');
+      }
+    }
+  };
+
+  prevBtn.onclick = function () {
+    if (increment > 0) {
+      content[increment].classList.remove('active');
+      increment--;
+      stepItem[increment + 1].classList.remove('active');
+      content[increment].classList.add('active');
+    } else {
+      return;
+    }
+  };
+
+  for (var x = 0; x < stepButton.length; x++) {
+    stepButton[x].onclick = function () {
+      if (increment > this.value) {
+        do {
+          stepItem[increment].classList.remove('active');
+          content[increment].classList.remove('active');
+          increment--;
+        } while (increment >= this.value);
+      } else {
+        content[increment].classList.remove('active');
+      }
+
+      stepItem[this.value].classList.add('active');
+      content[this.value].classList.add('active');
+      increment = this.value;
+
+      for (var v = 0; v < increment; v++) {
+        stepItem[v].classList.add('active');
+      }
+    };
+  }
+};
+
+exports.default = steps;
 },{}],"js/index.ts":[function(require,module,exports) {
 "use strict";
 
@@ -179,9 +253,12 @@ var flickityInit_1 = __importDefault(require("./components/flickityInit"));
 
 var forEachPolyfill_1 = __importDefault(require("./components/forEachPolyfill"));
 
+var steps_1 = __importDefault(require("./components/steps"));
+
 document.addEventListener('DOMContentLoaded', function () {
   forEachPolyfill_1.default();
   flickityInit_1.default();
+  steps_1.default();
 }, false);
-},{"./components/flickityInit":"js/components/flickityInit.ts","./components/forEachPolyfill":"js/components/forEachPolyfill.ts"}]},{},["js/index.ts"], null)
+},{"./components/flickityInit":"js/components/flickityInit.ts","./components/forEachPolyfill":"js/components/forEachPolyfill.ts","./components/steps":"js/components/steps.ts"}]},{},["js/index.ts"], null)
 //# sourceMappingURL=/js/index.js.map
