@@ -572,6 +572,105 @@ div {
   letter-spacing: 0.1em;
 }
 
+.about {
+  padding: 147px 0 87px;
+}
+.about__title {
+  margin-bottom: 41px;
+}
+.about__title span {
+  color: #EFD395;
+}
+.about__content {
+  font-size: 1.3rem;
+  font-weight: 300;
+  line-height: 1.6923076923em;
+  letter-spacing: 0.055em;
+  margin-bottom: 51px;
+}
+.about__img {
+  width: 100%;
+  margin-bottom: 54px;
+}
+.about__img img {
+  width: 100%;
+}
+.about__item-heading {
+  color: #EFD395;
+  margin-bottom: 52px;
+}
+@media screen and (max-width: 767px) {
+  .about__item-heading {
+    margin-bottom: 16px;
+  }
+}
+.about__item-wrapper {
+  max-width: 1210px;
+  width: 80%;
+  height: 300px;
+  margin: 0 auto 69px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  text-align: center;
+  background-color: #fff;
+  padding: 44px 50px 53px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media screen and (max-width: 767px) {
+  .about__item-wrapper {
+    padding: 22px 4% 23px;
+    width: 100%;
+  }
+}
+.about__shape {
+  display: block;
+  position: absolute;
+  background: #fff;
+  border-radius: 6px;
+  width: 190px;
+  height: 190px;
+  z-index: -1;
+}
+.about__shape:first-of-type {
+  transform: rotate(36.54deg);
+  left: -72px;
+  top: 35px;
+}
+.about__shape:nth-of-type(2) {
+  transform: rotate(144.46deg);
+  left: -72px;
+  top: 75px;
+}
+.about__shape:nth-of-type(3) {
+  transform: rotate(-36.54deg);
+  right: -72px;
+  top: 35px;
+}
+.about__shape:nth-of-type(4) {
+  transform: rotate(-144.46deg);
+  right: -72px;
+  top: 75px;
+}
+.about__item-content {
+  font-size: 1.5rem;
+  font-weight: 300;
+  line-height: 1.4666666667em;
+  letter-spacing: 0.055em;
+}
+.about__partner-row {
+  display: flex;
+  justify-content: space-evenly;
+}
+.about__partner-row:first-of-type {
+  margin-bottom: 25px;
+}
+
 .content-wrapper {
   position: relative;
   max-width: 1380px;
@@ -678,6 +777,27 @@ div {
 .carousel-cell.carousel-cell.is-selected > .service__blurb > .service__blurb-content {
   position: relative;
   opacity: 1;
+}
+
+.svg {
+  position: absolute;
+  width: 0;
+  height: 0;
+  overflow: visible;
+}
+
+.clipped {
+  width: 271px;
+  height: 350px;
+  background-color: #eaeaea;
+  -webkit-clip-path: url(#my-clip-path);
+  clip-path: url(#my-clip-path);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.clipped img {
+  width: 155px;
 }
 
 /*# sourceMappingURL=/main.css.map */

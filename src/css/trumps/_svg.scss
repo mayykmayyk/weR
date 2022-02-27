@@ -1,0 +1,21 @@
+.svg {
+  position: absolute;
+  width: 0;
+  height: 0;
+  overflow: visible;
+}
+
+.clipped {
+  width: 271px;
+  height: 350px;
+  background-color: #eaeaea;
+  -webkit-clip-path: url(#my-clip-path);
+  clip-path: url(#my-clip-path);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  img {
+    width: 155px;
+  }
+}
