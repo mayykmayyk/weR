@@ -117,7 +117,7 @@ parcelRequire = (function (modules, cache, entry, globalName) {
   }
 
   return newRequire;
-})({"N10I":[function(require,module,exports) {
+})({"js/components/flickityInit.ts":[function(require,module,exports) {
 "use strict";
 /**
 * Initialize flickity
@@ -130,15 +130,18 @@ Object.defineProperty(exports, "__esModule", {
 
 var flickityInit = function flickityInit() {
   var service = document.querySelector('.home-carousel');
-  var carousel = new Flickity(service, {
-    pageDots: false,
-    freeScroll: true,
-    wrapAround: true
-  });
+
+  if (service) {
+    var carousel = new Flickity(service, {
+      pageDots: false,
+      freeScroll: true,
+      wrapAround: true
+    });
+  }
 };
 
 exports.default = flickityInit;
-},{}],"Y661":[function(require,module,exports) {
+},{}],"js/components/forEachPolyfill.ts":[function(require,module,exports) {
 "use strict";
 /**
 * Foreach polyfill for browsers
@@ -161,7 +164,32 @@ var foreachPolyfill = function foreachPolyfill() {
 };
 
 exports.default = foreachPolyfill;
-},{}],"HJva":[function(require,module,exports) {
+},{}],"js/components/memberHover.ts":[function(require,module,exports) {
+"use strict";
+/**
+* hover for each company member
+*/
+//@ts-nocheck
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var memberHover = function memberHover() {
+  var member = document.querySelectorAll('.js-hover');
+  member.forEach(function (n) {
+    n.onmouseover = function () {
+      this.classList.add('mouse-over');
+    };
+
+    n.onmouseout = function () {
+      this.classList.remove('mouse-over');
+    };
+  });
+};
+
+exports.default = memberHover;
+},{}],"js/components/steps.ts":[function(require,module,exports) {
 "use strict";
 /**
 * script for steps component
@@ -179,66 +207,69 @@ var steps = function steps() {
   var prevBtn = document.querySelector('.js-prev');
   var nextBtn = document.querySelector('.js-next');
   var increment = 0;
-  window.addEventListener('DOMContentLoaded', function () {
-    stepItem[0].classList.add('active');
-    content[0].classList.add('active');
-  });
 
-  nextBtn.onclick = function () {
-    if (increment < stepItem.length - 1) {
-      content[increment].classList.remove('active');
-      increment++;
+  if (stepItem && stepButton && content && prevBtn && nextBtn) {
+    window.addEventListener('DOMContentLoaded', function () {
+      stepItem[0].classList.add('active');
+      content[0].classList.add('active');
+    });
 
-      if (increment < stepItem.length) {
-        stepItem[increment].classList.add('active');
-        content[increment].classList.add('active');
-      }
-    } else {
-      return; // for (let i = stepItem.length -1; i > 0; i--) {
-      //   stepItem[i].classList.remove('active');
-      //   content[i].classList.remove('active');
-      //   increment = 0;
-      //   content[increment].classList.add('active');
-      // }
-    }
-  };
-
-  prevBtn.onclick = function () {
-    if (increment > 0) {
-      content[increment].classList.remove('active');
-      increment--;
-      stepItem[increment + 1].classList.remove('active');
-      content[increment].classList.add('active');
-    } else {
-      return;
-    }
-  };
-
-  for (var x = 0; x < stepButton.length; x++) {
-    stepButton[x].onclick = function () {
-      if (increment > this.value) {
-        do {
-          stepItem[increment].classList.remove('active');
-          content[increment].classList.remove('active');
-          increment--;
-        } while (increment >= this.value);
-      } else {
+    nextBtn.onclick = function () {
+      if (increment < stepItem.length - 1) {
         content[increment].classList.remove('active');
-      }
+        increment++;
 
-      stepItem[this.value].classList.add('active');
-      content[this.value].classList.add('active');
-      increment = this.value;
-
-      for (var v = 0; v < increment; v++) {
-        stepItem[v].classList.add('active');
+        if (increment < stepItem.length) {
+          stepItem[increment].classList.add('active');
+          content[increment].classList.add('active');
+        }
+      } else {
+        return; // for (let i = stepItem.length -1; i > 0; i--) {
+        //   stepItem[i].classList.remove('active');
+        //   content[i].classList.remove('active');
+        //   increment = 0;
+        //   content[increment].classList.add('active');
+        // }
       }
     };
+
+    prevBtn.onclick = function () {
+      if (increment > 0) {
+        content[increment].classList.remove('active');
+        increment--;
+        stepItem[increment + 1].classList.remove('active');
+        content[increment].classList.add('active');
+      } else {
+        return;
+      }
+    };
+
+    for (var x = 0; x < stepButton.length; x++) {
+      stepButton[x].onclick = function () {
+        if (increment > this.value) {
+          do {
+            stepItem[increment].classList.remove('active');
+            content[increment].classList.remove('active');
+            increment--;
+          } while (increment >= this.value);
+        } else {
+          content[increment].classList.remove('active');
+        }
+
+        stepItem[this.value].classList.add('active');
+        content[this.value].classList.add('active');
+        increment = this.value;
+
+        for (var v = 0; v < increment; v++) {
+          stepItem[v].classList.add('active');
+        }
+      };
+    }
   }
 };
 
 exports.default = steps;
-},{}],"Rgmk":[function(require,module,exports) {
+},{}],"js/index.ts":[function(require,module,exports) {
 "use strict";
 
 var __importDefault = this && this.__importDefault || function (mod) {
@@ -255,12 +286,15 @@ var flickityInit_1 = __importDefault(require("./components/flickityInit"));
 
 var forEachPolyfill_1 = __importDefault(require("./components/forEachPolyfill"));
 
+var memberHover_1 = __importDefault(require("./components/memberHover"));
+
 var steps_1 = __importDefault(require("./components/steps"));
 
 document.addEventListener('DOMContentLoaded', function () {
   forEachPolyfill_1.default();
   flickityInit_1.default();
   steps_1.default();
+  memberHover_1.default();
 }, false);
-},{"./components/flickityInit":"N10I","./components/forEachPolyfill":"Y661","./components/steps":"HJva"}]},{},["Rgmk"], null)
+},{"./components/flickityInit":"js/components/flickityInit.ts","./components/forEachPolyfill":"js/components/forEachPolyfill.ts","./components/memberHover":"js/components/memberHover.ts","./components/steps":"js/components/steps.ts"}]},{},["js/index.ts"], null)
 //# sourceMappingURL=/js/index.js.map
