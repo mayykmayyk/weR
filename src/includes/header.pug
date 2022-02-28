@@ -3,8 +3,8 @@ header.header
     .header__logo 
       img(src="/img/logo.png" alt="weR Logo")
     .header__navigation 
-      a.header__navigation-item(href="#") Home 
-      a.header__navigation-item(href="#") About Us
+      +nav("index.pug","Home") 
+      +nav("about.pug","About Us") 
       a.header__navigation-item(href="#") Services
       a.header__navigation-item(href="#") Contact Us
       a.header__navigation-item.button(href="#") 

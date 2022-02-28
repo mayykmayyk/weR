@@ -1,0 +1,5 @@
+mixin nav(link, page)
+  a.header__navigation-item(
+    href=link
+    class={active:page===active}
+  ) #{page}

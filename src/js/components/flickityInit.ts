@@ -5,11 +5,15 @@
 
 const flickityInit = () => {
   let service = document.querySelector('.home-carousel');
-  let carousel = new Flickity(service, {
-    pageDots: false,
-    freeScroll: true,
-    wrapAround: true,
-  })
+
+  if (service) {
+    let carousel = new Flickity(service, {
+      pageDots: false,
+      freeScroll: true,
+      wrapAround: true,
+    })
+  }
+
 }
 
 export default flickityInit
