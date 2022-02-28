@@ -691,7 +691,7 @@ div {
   display: flex;
   margin-bottom: 87px;
 }
-.service__desc {
+.service__desc-1 {
   max-width: 600px;
   text-align: start;
   margin-right: 80px;
@@ -699,7 +699,7 @@ div {
   line-height: 1.6923076923em;
   letter-spacing: 0.055em;
 }
-.service__desc--fluid {
+.service__desc-1--fluid {
   margin-right: unset;
   max-width: 100%;
   padding: 0 50px;
