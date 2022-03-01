@@ -117,7 +117,7 @@ parcelRequire = (function (modules, cache, entry, globalName) {
   }
 
   return newRequire;
-})({"../js/ofi.min.js":[function(require,module,exports) {
+})({"BB26":[function(require,module,exports) {
 /*! npm.im/object-fit-images 3.2.4 */
 var objectFitImages = function () {
   "use strict";
@@ -251,5 +251,5 @@ var objectFitImages = function () {
       y = !1;
   return a.supportsObjectFit = f, a.supportsObjectPosition = d, o(), a;
 }();
-},{}]},{},["../js/ofi.min.js"], null)
+},{}]},{},["BB26"], null)
 //# sourceMappingURL=/ofi.min.8e98ee7a.js.map
