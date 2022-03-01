@@ -164,6 +164,32 @@ var foreachPolyfill = function foreachPolyfill() {
 };
 
 exports.default = foreachPolyfill;
+},{}],"rCjw":[function(require,module,exports) {
+"use strict";
+/**
+* show header on scroll
+*/
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var headerOnScroll = function headerOnScroll() {
+  var header = document.querySelector('.js-header');
+
+  if (header) {
+    window.addEventListener('scroll', function () {
+      //@ts-ignore
+      if (window.scrollY > header.offsetHeight) {
+        header.classList.add('active');
+      } else {
+        header.classList.remove('active');
+      }
+    });
+  }
+};
+
+exports.default = headerOnScroll;
 },{}],"js/components/memberHover.ts":[function(require,module,exports) {
 "use strict";
 /**
@@ -269,7 +295,7 @@ var steps = function steps() {
 };
 
 exports.default = steps;
-},{}],"js/index.ts":[function(require,module,exports) {
+},{}],"Rgmk":[function(require,module,exports) {
 "use strict";
 
 var __importDefault = this && this.__importDefault || function (mod) {
@@ -286,6 +312,8 @@ var flickityInit_1 = __importDefault(require("./components/flickityInit"));
 
 var forEachPolyfill_1 = __importDefault(require("./components/forEachPolyfill"));
 
+var header_1 = __importDefault(require("./components/header"));
+
 var memberHover_1 = __importDefault(require("./components/memberHover"));
 
 var steps_1 = __importDefault(require("./components/steps"));
@@ -295,6 +323,7 @@ document.addEventListener('DOMContentLoaded', function () {
   flickityInit_1.default();
   steps_1.default();
   memberHover_1.default();
+  header_1.default();
 }, false);
-},{"./components/flickityInit":"js/components/flickityInit.ts","./components/forEachPolyfill":"js/components/forEachPolyfill.ts","./components/memberHover":"js/components/memberHover.ts","./components/steps":"js/components/steps.ts"}]},{},["js/index.ts"], null)
+},{"./components/flickityInit":"js/components/flickityInit.ts","./components/forEachPolyfill":"js/components/forEachPolyfill.ts","./components/header":"rCjw","./components/memberHover":"js/components/memberHover.ts","./components/steps":"js/components/steps.ts"}]},{},["Rgmk"], null)
 //# sourceMappingURL=/js/index.js.map
