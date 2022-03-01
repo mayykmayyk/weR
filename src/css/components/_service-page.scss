@@ -6,22 +6,6 @@
     margin-bottom: 87px;
   }
 
-  &__desc {
-    max-width: 600px;
-    text-align: start;
-    margin-right: 80px;
-    font-size: 1.3rem;
-    line-height: getem(13, 22);
-    letter-spacing: getem(1000, 55);
-
-    &--fluid {
-      margin-right: unset;
-      max-width: 100%;
-      padding: 0 50px;
-      margin-bottom: 79px;
-    }
-  }
-
   &__img {
     flex-shrink: 0;
     max-width: 700px;
@@ -72,7 +56,7 @@
   }
 
   &__quote {
-    font-size: 3rem;
+    font-size: 2.2rem;
     color: $white;
     font-weight: $bold;
   }

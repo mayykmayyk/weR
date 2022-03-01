@@ -98,6 +98,19 @@
     letter-spacing: getem(1000, 55);
   }
 
+  &__list {
+
+    li {
+      font-size: 1.5rem;
+      line-height: getem(15, 22);
+      letter-spacing: getem(1000, 55);
+
+      &:not(:last-of-type) {
+        margin-bottom: 15px;
+      }
+    }
+  }
+
   &__partner-row {
     display: flex;
     justify-content: space-evenly;
