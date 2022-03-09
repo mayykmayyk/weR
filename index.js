@@ -117,7 +117,7 @@ parcelRequire = (function (modules, cache, entry, globalName) {
   }
 
   return newRequire;
-})({"N10I":[function(require,module,exports) {
+})({"js/components/flickityInit.ts":[function(require,module,exports) {
 "use strict";
 /**
 * Initialize flickity
@@ -141,7 +141,7 @@ var flickityInit = function flickityInit() {
 };
 
 exports.default = flickityInit;
-},{}],"Y661":[function(require,module,exports) {
+},{}],"js/components/forEachPolyfill.ts":[function(require,module,exports) {
 "use strict";
 /**
 * Foreach polyfill for browsers
@@ -164,7 +164,7 @@ var foreachPolyfill = function foreachPolyfill() {
 };
 
 exports.default = foreachPolyfill;
-},{}],"rCjw":[function(require,module,exports) {
+},{}],"js/components/header.ts":[function(require,module,exports) {
 "use strict";
 /**
 * show header on scroll
@@ -190,7 +190,7 @@ var headerOnScroll = function headerOnScroll() {
 };
 
 exports.default = headerOnScroll;
-},{}],"oqrq":[function(require,module,exports) {
+},{}],"js/components/memberHover.ts":[function(require,module,exports) {
 "use strict";
 /**
 * hover for each company member
@@ -215,7 +215,7 @@ var memberHover = function memberHover() {
 };
 
 exports.default = memberHover;
-},{}],"HJva":[function(require,module,exports) {
+},{}],"js/components/steps.ts":[function(require,module,exports) {
 "use strict";
 /**
 * script for steps component
@@ -295,7 +295,7 @@ var steps = function steps() {
 };
 
 exports.default = steps;
-},{}],"Rgmk":[function(require,module,exports) {
+},{}],"js/index.ts":[function(require,module,exports) {
 "use strict";
 
 var __importDefault = this && this.__importDefault || function (mod) {
@@ -325,5 +325,5 @@ document.addEventListener('DOMContentLoaded', function () {
   memberHover_1.default();
   header_1.default();
 }, false);
-},{"./components/flickityInit":"N10I","./components/forEachPolyfill":"Y661","./components/header":"rCjw","./components/memberHover":"oqrq","./components/steps":"HJva"}]},{},["Rgmk"], null)
+},{"./components/flickityInit":"js/components/flickityInit.ts","./components/forEachPolyfill":"js/components/forEachPolyfill.ts","./components/header":"js/components/header.ts","./components/memberHover":"js/components/memberHover.ts","./components/steps":"js/components/steps.ts"}]},{},["js/index.ts"], null)
 //# sourceMappingURL=/js/index.js.map

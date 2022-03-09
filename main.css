@@ -34,50 +34,14 @@ div {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 141px;
-  height: 45px;
-  background-color: #F7C663;
+  width: 183px;
+  height: 50px;
   color: #fff;
   border-radius: 6px;
-  border: 2px solid transparent;
   transition: all 400ms ease;
-}
-.button__shape {
-  display: block;
-  position: absolute;
-  background-color: #F7C663;
-  width: 26px;
-  height: 31px;
-  border-radius: 6px;
-  top: 0;
-  transition: all 400ms ease;
-}
-.button .button__shape:first-of-type {
-  transform: rotate(35.54deg);
-  top: 0;
-  left: -10px;
-}
-.button .button__shape:nth-of-type(2) {
-  transform: rotate(145.459deg);
-  top: 9px;
-  left: -10px;
-}
-.button .button__shape:nth-of-type(3) {
-  transform: rotate(145.54deg);
-  top: 0;
-  right: -10px;
-}
-.button .button__shape:nth-of-type(4) {
-  transform: rotate(35.459deg);
-  top: 9px;
-  right: -10px;
-}
-.button:hover {
-  background-color: #EFD395;
-  border: 2px solid #EFD395;
-}
-.button:hover .button__shape {
-  background-color: #EFD395;
+  background-image: url("./img/btn-bg.svg");
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .section-title {
@@ -192,10 +156,13 @@ div {
   z-index: -1;
 }
 .mv__bg img {
-  position: absolute;
   width: 100%;
-  height: 100%;
-  object-fit: cover;
+}
+.mv__bg::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to right, #F7C663, rgba(0, 0, 0, 0));
 }
 .mv__message {
   position: relative;
@@ -402,7 +369,7 @@ div {
   outline: none;
   cursor: pointer;
   overflow: hidden;
-  background-image: url("/img/indicator-bg.svg");
+  background-image: url("./img/indicator-bg.svg");
   background-color: transparent;
 }
 .step__indicator::after {
@@ -410,7 +377,7 @@ div {
   position: absolute;
   width: 38px;
   height: 42px;
-  background-image: url("/img/indicator-active.svg");
+  background-image: url("./img/indicator-active.svg");
   background-repeat: no-repeat;
   left: 6px;
   top: 7px;
@@ -466,7 +433,7 @@ div {
   content: "";
   position: absolute;
   inset: 0;
-  background-image: url("/img/icon-arrow.png");
+  background-image: url("./img/icon-arrow.png");
   background-size: 50px;
   background-repeat: no-repeat;
   background-position: center;
@@ -502,7 +469,7 @@ div {
 
 .why {
   padding: 55px 0 38px;
-  background-image: url("/img/why-bg.png");
+  background-image: url("./img/why-bg.png");
 }
 .why__title {
   margin-bottom: 52px;
