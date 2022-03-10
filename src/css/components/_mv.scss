@@ -1,7 +1,9 @@
 .mv {
   position: relative;
   overflow: hidden;
-  padding: 300px 0 200px;
+  display: flex;
+  align-items: center;
+  height: 800px;
 
   &__content-wrapper {
     max-width: 1380px;
@@ -10,12 +12,11 @@
   }
 
   &__bg {
-    max-width: 700px;
     width: 100%;
     position: absolute;
-    top: 20px;
-    right: 0;
-    transform: translateX(30%);
+    left: 0;
+    height: 800px;
+    overflow: hidden;
 
     img {
       width: 100%;
@@ -26,6 +27,7 @@
     position: relative;
     padding-left: 36px;
     margin-bottom: 55px;
+    color: $white;
     
     &::before {
       content: '';

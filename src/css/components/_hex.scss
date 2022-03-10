@@ -1,0 +1,39 @@
+.hex {
+  width: fit-content;
+  position: absolute;
+  top: -120px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+
+  &__row {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__item {
+    width: 369px;
+    height: 325px;
+    background: url('/img/hex.svg');
+
+    &:first-of-type {
+
+    }
+
+    &:nth-of-type(2) {
+      transform: translateY(190px);
+    }
+
+    &:nth-of-type(3) {
+   
+    }
+
+    &:nth-of-type(4) {
+      transform: translateY(-150px);
+    }
+
+    &:nth-of-type(5) {
+
+    }
+  }
+}
