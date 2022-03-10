@@ -7,6 +7,8 @@
 
   &__content-wrapper {
     position: relative;
+    max-width: 1600px;
+    margin: 0 auto;
   }
 
   &__bg {
@@ -20,13 +22,6 @@
     img {
       width: 100%;
     }
-
-    &::before{
-      content: '';
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(to right, $primary, rgba(0, 0, 0, 0));
-    }
   }
 
   &__message {
@@ -34,15 +29,6 @@
     padding-left: 36px;
     margin-bottom: 55px;
     color: $white;
-    
-    &::before {
-      content: '';
-      position: absolute;
-      width: 2px;
-      height: 105%;
-      background-color: $primary;
-      left: 0;
-    }
   }
 
   &__subtitle {
@@ -56,6 +42,8 @@
   &__title {
     color: $primary;
     margin-bottom: 21px;
+    font-size: 7.5rem;
+    line-height: getem(75, 90);
   }
 
   &__content {
