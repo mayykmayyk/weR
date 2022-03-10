@@ -3,11 +3,12 @@
   overflow: hidden;
   display: flex;
   align-items: center;
-  height: 800px;
+  height: 950px;
 
   &__content-wrapper {
     position: relative;
-    max-width: 1600px;
+    max-width: 1600px !important;
+    width: 100%;
     margin: 0 auto;
   }
 
@@ -20,7 +21,10 @@
     overflow: hidden;
 
     img {
-      width: 100%;
+      width: 120%;
+      position: absolute;
+      right: -380px;
+      top: -100px;
     }
   }
 
@@ -29,11 +33,21 @@
     padding-left: 36px;
     margin-bottom: 55px;
     color: $white;
+    height: fit-content;
+
+    &::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      width: 2px;
+      height: 100%;
+      background: $primary;
+    }
   }
 
   &__subtitle {
     display: block;
-    font-size: 1.8rem;
+    font-size: 2.2rem;
     line-height: getem(18, 31.55);
     letter-spacing: getem(1000, 55);
     margin-bottom: 22px;
@@ -44,6 +58,8 @@
     margin-bottom: 21px;
     font-size: 7.5rem;
     line-height: getem(75, 90);
+    font-weight: $heavy;
+    text-transform: uppercase;
   }
 
   &__content {
