@@ -182,11 +182,12 @@ div {
   overflow: hidden;
   display: flex;
   align-items: center;
-  height: 800px;
+  height: 950px;
 }
 .mv__content-wrapper {
   position: relative;
-  max-width: 1600px;
+  max-width: 1600px !important;
+  width: 100%;
   margin: 0 auto;
 }
 .mv__bg {
@@ -198,17 +199,29 @@ div {
   overflow: hidden;
 }
 .mv__bg img {
-  width: 100%;
+  width: 120%;
+  position: absolute;
+  right: -380px;
+  top: -100px;
 }
 .mv__message {
   position: relative;
   padding-left: 36px;
   margin-bottom: 55px;
   color: #fff;
+  height: fit-content;
+}
+.mv__message::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 2px;
+  height: 100%;
+  background: #F7C663;
 }
 .mv__subtitle {
   display: block;
-  font-size: 1.8rem;
+  font-size: 2.2rem;
   line-height: 1.7527777778em;
   letter-spacing: 0.055em;
   margin-bottom: 22px;
@@ -218,6 +231,8 @@ div {
   margin-bottom: 21px;
   font-size: 7.5rem;
   line-height: 1.2em;
+  font-weight: 900;
+  text-transform: uppercase;
 }
 .mv__content {
   font-size: 1.3rem;
@@ -235,7 +250,7 @@ div {
 
 .why {
   position: relative;
-  padding-top: 600px;
+  padding-top: 80px;
   margin-bottom: 200px;
 }
 .why__container {
