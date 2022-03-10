@@ -3,12 +3,13 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 183px;
+  width: 181px;
   height: 50px;
+  background-color: $primary;
   color: $white;
-  border-radius: 6px;
-  transition: all 400ms ease;
-  background-image: url('/img/btn-bg.svg');
+  border-radius: 5px;
+  background: url('/img/btn-hex.svg');
   background-repeat: no-repeat;
   background-position: center;
+  font-size: 1.6rem;
 }
