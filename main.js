@@ -117,31 +117,7 @@ parcelRequire = (function (modules, cache, entry, globalName) {
   }
 
   return newRequire;
-})({"js/components/flickityInit.ts":[function(require,module,exports) {
-"use strict";
-/**
-* Initialize flickity
-*/
-//@ts-nocheck
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var flickityInit = function flickityInit() {
-  var service = document.querySelector('.home-carousel');
-
-  if (service) {
-    var carousel = new Flickity(service, {
-      pageDots: false,
-      freeScroll: true,
-      wrapAround: true
-    });
-  }
-};
-
-exports.default = flickityInit;
-},{}],"js/components/forEachPolyfill.ts":[function(require,module,exports) {
+})({"js/components/forEachPolyfill.ts":[function(require,module,exports) {
 "use strict";
 /**
 * Foreach polyfill for browsers
@@ -164,57 +140,6 @@ var foreachPolyfill = function foreachPolyfill() {
 };
 
 exports.default = foreachPolyfill;
-},{}],"js/components/header.ts":[function(require,module,exports) {
-"use strict";
-/**
-* show header on scroll
-*/
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var headerOnScroll = function headerOnScroll() {
-  var header = document.querySelector('.js-header');
-
-  if (header) {
-    window.addEventListener('scroll', function () {
-      //@ts-ignore
-      if (window.scrollY > header.offsetHeight) {
-        header.classList.add('active');
-      } else {
-        header.classList.remove('active');
-      }
-    });
-  }
-};
-
-exports.default = headerOnScroll;
-},{}],"js/components/memberHover.ts":[function(require,module,exports) {
-"use strict";
-/**
-* hover for each company member
-*/
-//@ts-nocheck
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var memberHover = function memberHover() {
-  var member = document.querySelectorAll('.js-hover');
-  member.forEach(function (n) {
-    n.onmouseover = function () {
-      this.classList.add('mouse-over');
-    };
-
-    n.onmouseout = function () {
-      this.classList.remove('mouse-over');
-    };
-  });
-};
-
-exports.default = memberHover;
 },{}],"js/components/steps.ts":[function(require,module,exports) {
 "use strict";
 /**
@@ -244,11 +169,8 @@ var steps = function steps() {
       if (increment < stepItem.length - 1) {
         content[increment].classList.remove('active');
         increment++;
-
-        if (increment < stepItem.length) {
-          stepItem[increment].classList.add('active');
-          content[increment].classList.add('active');
-        }
+        stepItem[increment].classList.add('active');
+        content[increment].classList.add('active');
       } else {
         return; // for (let i = stepItem.length -1; i > 0; i--) {
         //   stepItem[i].classList.remove('active');
@@ -268,29 +190,27 @@ var steps = function steps() {
       } else {
         return;
       }
-    };
+    }; // for (let x = 0; x < stepButton.length; x++) {
+    //   stepButton[x].onclick = function() {
+    //     if (increment > this.value) {
+    //       do {
+    //         stepItem[increment].classList.remove('active');
+    //         content[increment].classList.remove('active');
+    //         increment--;
+    //       }
+    //       while (increment >= this.value)
+    //     } else {
+    //       content[increment].classList.remove('active');
+    //     }
+    //     stepItem[this.value].classList.add('active');
+    //     content[this.value].classList.add('active');
+    //     increment = this.value;
+    //     for (let v = 0; v < increment; v++) {
+    //       stepItem[v].classList.add('active');
+    //     }
+    //   }
+    // }
 
-    for (var x = 0; x < stepButton.length; x++) {
-      stepButton[x].onclick = function () {
-        if (increment > this.value) {
-          do {
-            stepItem[increment].classList.remove('active');
-            content[increment].classList.remove('active');
-            increment--;
-          } while (increment >= this.value);
-        } else {
-          content[increment].classList.remove('active');
-        }
-
-        stepItem[this.value].classList.add('active');
-        content[this.value].classList.add('active');
-        increment = this.value;
-
-        for (var v = 0; v < increment; v++) {
-          stepItem[v].classList.add('active');
-        }
-      };
-    }
   }
 };
 
@@ -308,22 +228,13 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var flickityInit_1 = __importDefault(require("./components/flickityInit"));
-
 var forEachPolyfill_1 = __importDefault(require("./components/forEachPolyfill"));
-
-var header_1 = __importDefault(require("./components/header"));
-
-var memberHover_1 = __importDefault(require("./components/memberHover"));
 
 var steps_1 = __importDefault(require("./components/steps"));
 
 document.addEventListener('DOMContentLoaded', function () {
   forEachPolyfill_1.default();
-  flickityInit_1.default();
   steps_1.default();
-  memberHover_1.default();
-  header_1.default();
 }, false);
-},{"./components/flickityInit":"js/components/flickityInit.ts","./components/forEachPolyfill":"js/components/forEachPolyfill.ts","./components/header":"js/components/header.ts","./components/memberHover":"js/components/memberHover.ts","./components/steps":"js/components/steps.ts"}]},{},["js/index.ts"], null)
+},{"./components/forEachPolyfill":"js/components/forEachPolyfill.ts","./components/steps":"js/components/steps.ts"}]},{},["js/index.ts"], null)
 //# sourceMappingURL=/js/index.js.map
