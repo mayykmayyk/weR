@@ -140,6 +140,31 @@ var foreachPolyfill = function foreachPolyfill() {
 };
 
 exports.default = foreachPolyfill;
+},{}],"js/components/headerScroll.ts":[function(require,module,exports) {
+"use strict";
+/**
+* Foreach polyfill for browsers
+*/
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var headerScroll = function headerScroll() {
+  var header = document.querySelector('.header');
+
+  if (header) {
+    window.addEventListener('scroll', function () {
+      if (window.scrollY > 100) {
+        header.classList.add('scrolled');
+      } else {
+        header.classList.remove('scrolled');
+      }
+    });
+  }
+};
+
+exports.default = headerScroll;
 },{}],"js/components/steps.ts":[function(require,module,exports) {
 "use strict";
 /**
@@ -230,11 +255,14 @@ Object.defineProperty(exports, "__esModule", {
 
 var forEachPolyfill_1 = __importDefault(require("./components/forEachPolyfill"));
 
+var headerScroll_1 = __importDefault(require("./components/headerScroll"));
+
 var steps_1 = __importDefault(require("./components/steps"));
 
 document.addEventListener('DOMContentLoaded', function () {
   forEachPolyfill_1.default();
   steps_1.default();
+  headerScroll_1.default();
 }, false);
-},{"./components/forEachPolyfill":"js/components/forEachPolyfill.ts","./components/steps":"js/components/steps.ts"}]},{},["js/index.ts"], null)
+},{"./components/forEachPolyfill":"js/components/forEachPolyfill.ts","./components/headerScroll":"js/components/headerScroll.ts","./components/steps":"js/components/steps.ts"}]},{},["js/index.ts"], null)
 //# sourceMappingURL=/js/index.js.map
