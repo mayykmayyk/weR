@@ -47,7 +47,7 @@ html {
   height: 60px;
   z-index: 1;
   color: #e0c067;
-  font-size: 1.2526041667vw;
+  font-size: 2.4rem;
   font-weight: 600;
   transition: all 300ms ease;
   display: flex;
@@ -135,7 +135,7 @@ html {
   text-transform: uppercase;
   margin-bottom: 50px;
   font-weight: 800;
-  font-size: 3.125vw;
+  font-size: 6rem;
 }
 .section__title span {
   color: #e0c067;
@@ -201,7 +201,7 @@ html {
   }
 }
 .header__navigation-item {
-  font-size: 0.9895833333vw;
+  font-size: 1.8rem;
   letter-spacing: 0.055em;
   line-height: 2.2535714286em;
   color: #fff;
@@ -313,35 +313,20 @@ html {
   letter-spacing: 0.1em;
   color: #fff;
   font-weight: 700;
-  font-size: 1.3020833333vw;
-}
-@media screen and (min-width: 1920px) {
-  .mv__msg-subtitle {
-    font-size: 2.5rem;
-  }
+  font-size: 2rem;
 }
 .mv__msg-title {
   line-height: 1.2em;
   letter-spacing: 0.1em;
   color: #e0c067;
-  font-size: 3.90625vw;
+  font-size: 6rem;
   font-weight: 800;
-}
-@media screen and (min-width: 1920px) {
-  .mv__msg-title {
-    font-size: 7.5rem;
-  }
 }
 .mv__msg-content {
   line-height: 1.2em;
   letter-spacing: 0.1em;
   color: #fff;
-  font-size: 1.1458333333vw;
-}
-@media screen and (min-width: 1920px) {
-  .mv__msg-content {
-    font-size: 2.2rem;
-  }
+  font-size: 1.8rem;
 }
 .mv__btn-wrap {
   margin-top: 71px;
@@ -356,12 +341,11 @@ html {
 .blurb__list {
   display: flex;
   max-width: 1800px;
-  width: 100%;
+  width: fit-content;
   margin: 0 auto;
   justify-content: flex-start;
   gap: 30px;
   flex-wrap: nowrap;
-  padding: 40px;
 }
 .blurb__icon {
   max-width: 95px;
@@ -386,7 +370,7 @@ html {
 }
 .blurb__title {
   color: #fff;
-  font-size: 1.1458333333vw;
+  font-size: 2.2rem;
   font-line-height: 1.2em;
 }
 .blurb__title span {
@@ -397,7 +381,7 @@ html {
   top: 70px;
   color: #fff;
   line-height: 1.2em;
-  font-size: 0.9895833333vw;
+  font-size: 1.8rem;
 }
 
 .who {
@@ -419,7 +403,7 @@ html {
 .who__content {
   line-height: 1.2em;
   color: #fff;
-  font-size: 0.9895833333vw;
+  font-size: 1.8rem;
 }
 .who__img {
   max-width: 744px;
@@ -438,16 +422,16 @@ html {
   display: flex;
   align-items: center;
   justify-content: flex-start;
+  gap: 15PX;
 }
 .services__sub-row {
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
-  max-width: 966px;
   column-gap: 1.0416666667vw;
   width: 100%;
   align-items: center;
-  padding-left: 2.0833333333vw;
+  flex-grow: 1;
 }
 .services__sub-row--secondary {
   transform: translateY(-20px);
@@ -509,7 +493,7 @@ html {
   max-width: 181px;
   width: 9.4270833333vw;
   margin: 0 auto;
-  margin-bottom: 0.78125vw;
+  margin-bottom: 0.2604166667vw;
 }
 .services__item-img--small {
   max-width: 101px;
@@ -521,13 +505,12 @@ html {
 .services__name {
   font-size: 1.9270833333vw;
   text-transform: uppercase;
-  margin-bottom: 0.78125vw;
 }
 .services__name--small {
   font-size: 1.1458333333vw;
 }
 .services__content {
-  font-size: 0.9895833333vw;
+  font-size: 0.8854166667vw;
 }
 
 .step {
@@ -539,9 +522,7 @@ html {
 .step__module {
   position: relative;
   max-width: 1100px;
-  height: 550px;
   margin: auto;
-  overflow-x: hidden;
 }
 .step__list {
   margin: 0 auto;
@@ -550,6 +531,7 @@ html {
   justify-content: space-between;
   text-align: center;
   margin-bottom: 75px;
+  overflow: hidden;
 }
 .step__item {
   position: relative;
@@ -642,7 +624,7 @@ html {
 }
 .step__buttons {
   position: absolute;
-  top: 50%;
+  top: 200px;
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -688,7 +670,7 @@ html {
   width: 100%;
 }
 .step__text {
-  font-size: 0.9895833333vw;
+  font-size: 1.8rem;
   line-height: 1.2222222222em;
   letter-spacing: 0.1em;
   text-align: center;
@@ -697,6 +679,7 @@ html {
 .how {
   padding-top: 180px;
   background-color: #fff;
+  padding-bottom: 130px;
 }
 .how .section__heading-wrap {
   margin-bottom: 130px;
