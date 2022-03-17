@@ -140,6 +140,29 @@ var foreachPolyfill = function foreachPolyfill() {
 };
 
 exports.default = foreachPolyfill;
+},{}],"js/components/hamburger.ts":[function(require,module,exports) {
+"use strict";
+/**
+* hamburger button
+*/
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var hamburger = function hamburger() {
+  var button = document.querySelector('.js-burger');
+  var menu = document.querySelector('.js-menu');
+
+  if (button && menu) {
+    button.addEventListener('click', function () {
+      button.classList.toggle('active');
+      menu.classList.toggle('active');
+    });
+  }
+};
+
+exports.default = hamburger;
 },{}],"js/components/headerScroll.ts":[function(require,module,exports) {
 "use strict";
 /**
@@ -255,6 +278,8 @@ Object.defineProperty(exports, "__esModule", {
 
 var forEachPolyfill_1 = __importDefault(require("./components/forEachPolyfill"));
 
+var hamburger_1 = __importDefault(require("./components/hamburger"));
+
 var headerScroll_1 = __importDefault(require("./components/headerScroll"));
 
 var steps_1 = __importDefault(require("./components/steps"));
@@ -263,6 +288,7 @@ document.addEventListener('DOMContentLoaded', function () {
   forEachPolyfill_1.default();
   steps_1.default();
   headerScroll_1.default();
+  hamburger_1.default();
 }, false);
-},{"./components/forEachPolyfill":"js/components/forEachPolyfill.ts","./components/headerScroll":"js/components/headerScroll.ts","./components/steps":"js/components/steps.ts"}]},{},["js/index.ts"], null)
+},{"./components/forEachPolyfill":"js/components/forEachPolyfill.ts","./components/hamburger":"js/components/hamburger.ts","./components/headerScroll":"js/components/headerScroll.ts","./components/steps":"js/components/steps.ts"}]},{},["js/index.ts"], null)
 //# sourceMappingURL=/js/index.js.map

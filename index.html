@@ -5,19 +5,26 @@
     <meta http-equiv="X-UA-Compatible" content="IE=11">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=yes">
     <title></title>
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
     <header class="header"> 
-      <div class="header__content"> 
+      <div class="header__content">
         <div class="header__logo"> <img src="./img/logo.png" alt="weR Logo"></div>
-        <div class="header__navigation"> <a class="header__navigation-item active" href="/index.html">Home</a><a class="header__navigation-item" href="#">About</a><span class="header__navigation-item header__with-sub">Services
-            <div class="header__sub-menu"> <a class="header__navigation-item header__navigation-item--sub" href="#">General VA </a><a class="header__navigation-item header__navigation-item--sub" href="#">Tech VA</a></div></span><a class="header__navigation-item" href="#">Contact Us</a><a class="header__navigation-item btn btn--small" href="#">
-             Pricing</a>
+        <div class="header__navigation pc"><a class="header__navigation-item active" href="/index.html">Home</a><a class="header__navigation-item" href="#">About</a><span class="header__navigation-item header__with-sub">Services
+            <div class="header__sub-menu"> <a class="header__navigation-item header__navigation-item--sub" href="#">General VA </a><a class="header__navigation-item header__navigation-item--sub" href="#">Tech VA</a></div></span><a class="header__navigation-item" href="#">Contact Us</a><a class="header__navigation-item btn btn--small" href="#">Consult with Us</a>
         </div>
+        <button class="header__hamburger-btn js-burger sp"><span class="header__hamburger-icon"></span><span class="header__hamburger-icon"></span></button>
       </div>
     </header>
+    <div class="header__mobile-menu js-menu sp">
+      <div class="header__mobile-content"> <a class="header__navigation-item active" href="/index.html">Home</a><a class="header__navigation-item" href="#">About</a>
+        <div class="header__navigation-item" href="#">Services </div>
+        <div class="header__sub-menu--mobile active"><a class="header__navigation-item header__navigation-item--mobile" href="#">General VA </a><a class="header__navigation-item header__navigation-item--mobile" href="#">Tech VA</a></div><a class="header__navigation-item" href="#">Contact Us</a><a class="header__navigation-item btn btn--small" href="#">Consult with Us </a>
+      </div>
+    </div>
     <div class="mv__img"> <img src="./img/mv-bg.jpg" alt=""></div>
     <section class="mv">
       <div class="mv__wrapper">
@@ -27,14 +34,51 @@
                THE OUTSOURCE SOLUTION<br>FOR SCALING YOUR BUSINESS</h1>
             <p class="mv__msg-content">Focus on what matters most.<br>WeR ready to take on tasks to support your business journey towards growth.</p>
           </div>
-          <div class="mv__btn-wrap" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400"><a class="btn" href="#">Consult Us</a></div>
+          <div class="mv__btn-wrap" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400"><a class="btn" href="#">Consult with Us</a></div>
         </div>
       </div>
     </section>
     <main>
       <div class="main">
         <section class="blurb">
-          <div class="blurb__list"> 
+          <div class="blurb__list pc">
+            <div class="blurb__item" data-aos="fade-up" data-aos-delay="100">
+              <div class="blurb__icon"> <img src="./img/icon-blurb.png" alt=""></div>
+              <div class="blurb__content-wrap">
+                <h4 class="blurb__title"> <span>WE</span>R secure and reliable</h4>
+                <p class="blurb__content">We can assist you in achieving a sense of harmony in your life by doing complex administrative duties. You can always ask us for updates and set up tracking software to track our time if you want to make sure we're secure and reliable.</p>
+              </div>
+            </div>
+            <div class="blurb__item" data-aos="fade-up" data-aos-delay="200">
+              <div class="blurb__icon"> <img src="./img/icon-blurb.png" alt=""></div>
+              <div class="blurb__content-wrap"> 
+                <h4 class="blurb__title"> <span>WE</span>R designed around each client's needs</h4>
+                <p class="blurb__content">From a remote location, we offer various services to businesses and entrepreneurs. We can access the essential data and tools to accomplish the work virtually even though we are not in-office personnel.</p>
+              </div>
+            </div>
+            <div class="blurb__item" data-aos="fade-up" data-aos-delay="300"> 
+              <div class="blurb__icon"> <img src="./img/icon-blurb.png" alt=""></div>
+              <div class="blurb__content-wrap">
+                <h4 class="blurb__title"> <span>WE</span>R a 24/7 customer service provider</h4>
+                <p class="blurb__content">You can employ us to cater to different time zones because we are based remotely, allowing you and your employees to strike a decent work-life balance while yet being available to serve consumers at any time.</p>
+              </div>
+            </div>
+            <div class="blurb__item" data-aos="fade-up" data-aos-delay="400"> 
+              <div class="blurb__icon"> <img src="./img/icon-blurb.png" alt=""></div>
+              <div class="blurb__content-wrap"> 
+                <h4 class="blurb__title"> <span>WE</span>R cost-effective</h4>
+                <p class="blurb__content">You can engage us to do multiple non-core tasks for you instead of hiring full-time, in-house staff. On top of that, you only have to pay us half of what you would be paying your full-time employees. This is where we become cost-effective; we provide excellent service without costing you a lot of money.</p>
+              </div>
+            </div>
+            <div class="blurb__item" data-aos="fade-up" data-aos-delay="500"> 
+              <div class="blurb__icon"> <img src="./img/icon-blurb.png" alt=""></div>
+              <div class="blurb__content-wrap"> 
+                <h4 class="blurb__title"> <span>WE</span>R an excellent investment </h4>
+                <p class="blurb__content">Non-core operations that businesses and entrepreneurs deal with include sending emails and newsletters, answering client inquiries, conducting online research, scheduling meetings, and data entry.</p>
+              </div>
+            </div>
+          </div>
+          <div class="blurb__list sp" data-flickity="{&quot;contain&quot;:true,&quot;prevNextButtons&quot;:false,&quot;autoPlay&quot;:2500}">
             <div class="blurb__item" data-aos="fade-up" data-aos-delay="100">
               <div class="blurb__icon"> <img src="./img/icon-blurb.png" alt=""></div>
               <div class="blurb__content-wrap">
@@ -311,6 +355,7 @@
       </div>
     </footer>
     <script src="/ofi.min.8e98ee7a.js"></script>
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/smoothscroll-polyfill@0.4.4/dist/smoothscroll.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="main.js"></script>
