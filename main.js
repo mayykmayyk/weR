@@ -188,7 +188,7 @@ var headerScroll = function headerScroll() {
 };
 
 exports.default = headerScroll;
-},{}],"js/components/steps.ts":[function(require,module,exports) {
+},{}],"HJva":[function(require,module,exports) {
 "use strict";
 /**
 * script for steps component
@@ -238,27 +238,29 @@ var steps = function steps() {
       } else {
         return;
       }
-    }; // for (let x = 0; x < stepButton.length; x++) {
-    //   stepButton[x].onclick = function() {
-    //     if (increment > this.value) {
-    //       do {
-    //         stepItem[increment].classList.remove('active');
-    //         content[increment].classList.remove('active');
-    //         increment--;
-    //       }
-    //       while (increment >= this.value)
-    //     } else {
-    //       content[increment].classList.remove('active');
-    //     }
-    //     stepItem[this.value].classList.add('active');
-    //     content[this.value].classList.add('active');
-    //     increment = this.value;
-    //     for (let v = 0; v < increment; v++) {
-    //       stepItem[v].classList.add('active');
-    //     }
-    //   }
-    // }
+    };
 
+    for (var x = 0; x < stepButton.length; x++) {
+      stepButton[x].onclick = function () {
+        if (increment > this.value) {
+          do {
+            stepItem[increment].classList.remove('active');
+            content[increment].classList.remove('active');
+            increment--;
+          } while (increment >= this.value);
+        } else {
+          content[increment].classList.remove('active');
+        }
+
+        stepItem[this.value].classList.add('active');
+        content[this.value].classList.add('active');
+        increment = this.value;
+
+        for (var v = 0; v < increment; v++) {
+          stepItem[v].classList.add('active');
+        }
+      };
+    }
   }
 };
 
@@ -290,5 +292,5 @@ document.addEventListener('DOMContentLoaded', function () {
   headerScroll_1.default();
   hamburger_1.default();
 }, false);
-},{"./components/forEachPolyfill":"js/components/forEachPolyfill.ts","./components/hamburger":"js/components/hamburger.ts","./components/headerScroll":"js/components/headerScroll.ts","./components/steps":"js/components/steps.ts"}]},{},["js/index.ts"], null)
+},{"./components/forEachPolyfill":"js/components/forEachPolyfill.ts","./components/hamburger":"js/components/hamburger.ts","./components/headerScroll":"js/components/headerScroll.ts","./components/steps":"HJva"}]},{},["js/index.ts"], null)
 //# sourceMappingURL=/js/index.js.map
