@@ -1063,7 +1063,7 @@ svg {
   height: 100vh;
   background-color: rgba(51, 51, 51, 0.9);
   opacity: 0;
-  z-index: 1000;
+  z-index: 0;
   transition: all 500ms ease-in-out;
   display: flex;
   align-items: center;
@@ -1083,6 +1083,7 @@ svg {
   font-size: 1.8rem;
 }
 .modal.active {
+  z-index: 999;
   position: fixed;
   opacity: 1;
 }
@@ -1130,6 +1131,7 @@ svg {
   object-fit: cover;
 }
 .about__item {
+  position: relative;
   max-width: 1200px;
   width: 100%;
   margin: 0 auto;
@@ -1150,6 +1152,9 @@ svg {
 .about__heading {
   font-size: 6rem;
 }
+.about__content-wrap {
+  z-index: 1;
+}
 .about__content {
   margin-top: 25px;
   margin-bottom: 40px;
@@ -1164,6 +1169,35 @@ svg {
   font-weight: 600;
   margin-top: unset;
   margin-bottom: unset;
+}
+.about__shape {
+  display: block;
+  position: absolute;
+  background: #e0c067;
+  border-radius: 6px;
+  width: 169px;
+  height: 169px;
+  z-index: 0;
+}
+.about__shape:first-of-type {
+  transform: rotate(36.54deg);
+  left: -65px;
+  top: 32px;
+}
+.about__shape:nth-of-type(2) {
+  transform: rotate(144.46deg);
+  left: -65px;
+  top: 68px;
+}
+.about__shape:nth-of-type(3) {
+  transform: rotate(-36.54deg);
+  right: -65px;
+  top: 32px;
+}
+.about__shape:nth-of-type(4) {
+  transform: rotate(-144.46deg);
+  right: -65px;
+  top: 68px;
 }
 
 .team {
