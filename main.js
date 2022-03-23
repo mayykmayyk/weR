@@ -188,6 +188,48 @@ var headerScroll = function headerScroll() {
 };
 
 exports.default = headerScroll;
+},{}],"js/components/modal.ts":[function(require,module,exports) {
+"use strict";
+/**
+* Modal set up and settings
+*/
+
+var _this = this;
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+}); //@ts-nocheck
+
+var modal = function modal() {
+  var modal = document.querySelector('.modal');
+  var btn = document.querySelector('.js-btn');
+  var modalItem = document.querySelectorAll('.modal__item');
+  var serviceBtn = document.querySelectorAll('.js-service-button');
+  var body = document.querySelector('body');
+  var html = document.querySelector('html');
+
+  if (modal && btn && modalItem && serviceBtn && body && html) {
+    for (var i = 0; i < serviceBtn.length; i++) {
+      serviceBtn[i].onmousedown = function () {
+        modal.classList.add('active');
+        modalItem[this.value].classList.add('active');
+        body.style.overflow = 'hidden';
+        html.style.overflow = 'hidden';
+      };
+    }
+
+    btn.onmousedown = function () {
+      modal.classList.remove('active');
+      body.style.overflow = 'auto';
+      html.style.overflow = 'auto';
+      modalItem.forEach(function (item) {
+        modalItem[_this.value].classList.remove('active');
+      });
+    };
+  }
+};
+
+exports.default = modal;
 },{}],"HJva":[function(require,module,exports) {
 "use strict";
 /**
@@ -284,6 +326,8 @@ var hamburger_1 = __importDefault(require("./components/hamburger"));
 
 var headerScroll_1 = __importDefault(require("./components/headerScroll"));
 
+var modal_1 = __importDefault(require("./components/modal"));
+
 var steps_1 = __importDefault(require("./components/steps"));
 
 document.addEventListener('DOMContentLoaded', function () {
@@ -291,6 +335,7 @@ document.addEventListener('DOMContentLoaded', function () {
   steps_1.default();
   headerScroll_1.default();
   hamburger_1.default();
+  modal_1.default();
 }, false);
-},{"./components/forEachPolyfill":"js/components/forEachPolyfill.ts","./components/hamburger":"js/components/hamburger.ts","./components/headerScroll":"js/components/headerScroll.ts","./components/steps":"HJva"}]},{},["js/index.ts"], null)
+},{"./components/forEachPolyfill":"js/components/forEachPolyfill.ts","./components/hamburger":"js/components/hamburger.ts","./components/headerScroll":"js/components/headerScroll.ts","./components/modal":"js/components/modal.ts","./components/steps":"HJva"}]},{},["js/index.ts"], null)
 //# sourceMappingURL=/js/index.js.map
