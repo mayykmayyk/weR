@@ -194,8 +194,6 @@ exports.default = headerScroll;
 * Modal set up and settings
 */
 
-var _this = this;
-
 Object.defineProperty(exports, "__esModule", {
   value: true
 }); //@ts-nocheck
@@ -223,7 +221,7 @@ var modal = function modal() {
       body.style.overflow = 'auto';
       html.style.overflow = 'auto';
       modalItem.forEach(function (item) {
-        modalItem[_this.value].classList.remove('active');
+        item.classList.remove('active');
       });
     };
   }
