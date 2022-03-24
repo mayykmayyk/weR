@@ -11,11 +11,10 @@
   </head>
   <body>
     <header class="header"> 
-      <div class="header__content">
-        <div class="header__logo"> <img src="./img/logo.png" alt="weR Logo"></div>
+      <div class="header__content"><a class="header__logo" href="./index.html"><img src="./img/logo.png" alt="weR Logo"></a>
         <div class="header__navigation pc"><a class="header__navigation-item" href="./index.html">Home</a><a class="header__navigation-item" href="./about.html">About</a><span class="header__navigation-item header__with-sub">Services
             <div class="header__sub-menu"> <a class="header__navigation-item active" href="./general-va.html">General VA</a><a class="header__navigation-item" href="./tech-va.html">Tech VA</a>
-            </div></span><a class="header__navigation-item btn btn--small" href="#">Consult with Us</a>
+            </div></span><a class="header__navigation-item" href="./blog-index.html">Blog</a><a class="btn btn--small" href="./contact.html">Consult with Us</a>
         </div>
         <button class="header__hamburger-btn js-burger sp"><span class="header__hamburger-icon"></span><span class="header__hamburger-icon"></span></button>
       </div>
@@ -24,7 +23,7 @@
       <div class="header__mobile-content"> <a class="header__navigation-item" href="./index.html">Home</a><a class="header__navigation-item" href="./about.html">About</a>
         <div class="header__navigation-item" href="#">Services </div>
         <div class="header__sub-menu--mobile active"><a class="header__navigation-item active" href="./general-va.html">General VA</a><a class="header__navigation-item" href="./tech-va.html">Tech VA</a>
-        </div><a class="header__navigation-item btn btn--small" href="#">Consult with Us </a>
+        </div><a class="header__navigation-item" href="./blog-index.html">Blog</a><a class="btn btn--small" href="./contact.html">Consult with Us</a>
       </div>
     </div>
     <div class="gva"> 
@@ -40,145 +39,147 @@
           </div>
         </div>
       </div>
-      <div class="gva__services"> 
-        <div class="section__content-container">
-          <div class="gva__item"> 
-            <div class="gva__icon"> <img src="./img/hex-icon-admin.png" alt=""></div>
-            <div class="gva__content-wrap"> 
-              <div class="gva__title-wrap">
-                <h2 class="gva__service-name">ADMINISTRATIVE</h2>
-                <p class="gva__service-desc">WeR General Virtual Assistants provide quality administrative support to your team remotely.</p>
+      <div class="main main--white">
+        <div class="gva__services"> 
+          <div class="section__content-container">
+            <div class="gva__item"> 
+              <div class="gva__icon"> <img src="./img/hex-icon-admin.png" alt=""></div>
+              <div class="gva__content-wrap"> 
+                <div class="gva__title-wrap">
+                  <h2 class="gva__service-name">ADMINISTRATIVE</h2>
+                  <p class="gva__service-desc">WeR General Virtual Assistants provide quality administrative support to your team remotely.</p>
+                </div>
+                <ul class="gva__sub-list"> 
+                  <li class="gva__subitem"> 
+                    <h3 class="gva__service-name fs30">CLOUD ACCOUNT MANAGEMENT</h3>
+                    <p class="gva__service-desc pdl40">Launch and maintain cloud computing accounts such as DropBox, OneDrive, and GoogleDrive</p>
+                  </li>
+                  <li class="gva__subitem"> 
+                    <h3 class="gva__service-name fs30">TEAM SUPPORT</h3>
+                    <p class="gva__service-desc pdl40">Check and respond to emails <br>Check and respond to customer inquiries <br> Manage spam mail</p>
+                  </li>
+                  <li class="gva__subitem"> 
+                    <h3 class="gva__service-name fs30">CUSTOMER SUPPORT</h3>
+                    <p class="gva__service-desc pdl40">Organize Technical Support tickets <br> Assist in customer support</p>
+                  </li>
+                  <li class="gva__subitem"> 
+                    <h3 class="gva__service-name fs30">DOCUMENT MANAGEMENT</h3>
+                    <p class="gva__service-desc pdl40">Database building, entry, and updates <br> PDF management (converting, merging, and splitting files) <br> Composing documents from handwritten drafts, faxes, and dictations</p>
+                  </li>
+                  <li class="gva__subitem"> 
+                    <h3 class="gva__service-name fs30">CALENDAR MANAGEMENT</h3>
+                    <p class="gva__service-desc pdl40">Establish events <br> Update calendars for changes such as cancellations, postponements, or changes in venues <br> Manage events to prevent overlaps and ensure that enough time is allotted for planning</p>
+                  </li>
+                </ul>
               </div>
-              <ul class="gva__sub-list"> 
-                <li class="gva__subitem"> 
-                  <h3 class="gva__service-name fs30">CLOUD ACCOUNT MANAGEMENT</h3>
-                  <p class="gva__service-desc pdl40">Launch and maintain cloud computing accounts such as DropBox, OneDrive, and GoogleDrive</p>
-                </li>
-                <li class="gva__subitem"> 
-                  <h3 class="gva__service-name fs30">TEAM SUPPORT</h3>
-                  <p class="gva__service-desc pdl40">Check and respond to emails <br>Check and respond to customer inquiries <br> Manage spam mail</p>
-                </li>
-                <li class="gva__subitem"> 
-                  <h3 class="gva__service-name fs30">CUSTOMER SUPPORT</h3>
-                  <p class="gva__service-desc pdl40">Organize Technical Support tickets <br> Assist in customer support</p>
-                </li>
-                <li class="gva__subitem"> 
-                  <h3 class="gva__service-name fs30">DOCUMENT MANAGEMENT</h3>
-                  <p class="gva__service-desc pdl40">Database building, entry, and updates <br> PDF management (converting, merging, and splitting files) <br> Composing documents from handwritten drafts, faxes, and dictations</p>
-                </li>
-                <li class="gva__subitem"> 
-                  <h3 class="gva__service-name fs30">CALENDAR MANAGEMENT</h3>
-                  <p class="gva__service-desc pdl40">Establish events <br> Update calendars for changes such as cancellations, postponements, or changes in venues <br> Manage events to prevent overlaps and ensure that enough time is allotted for planning</p>
-                </li>
-              </ul>
+              <div class="gva__item-image gva__item-image--column"> <img src="./img/mv-bg.jpg" alt=""></div>
             </div>
-            <div class="gva__item-image gva__item-image--column"> <img src="./img/mv-bg.jpg" alt=""></div>
-          </div>
-          <div class="gva__item"> 
-            <div class="gva__icon"> <img src="./img/hex-icon-cs.png" alt=""></div>
-            <div class="gva__content-wrap"> 
-              <div class="gva__title-wrap"> 
-                <h2 class="gva__service-name">CUSTOMER SUPPORT </h2>
-                <p class="gva__service-desc">WeR VAs will help your customers find the solutions they need on different platforms. </p>
+            <div class="gva__item"> 
+              <div class="gva__icon"> <img src="./img/hex-icon-cs.png" alt=""></div>
+              <div class="gva__content-wrap"> 
+                <div class="gva__title-wrap"> 
+                  <h2 class="gva__service-name">CUSTOMER SUPPORT </h2>
+                  <p class="gva__service-desc">WeR VAs will help your customers find the solutions they need on different platforms. </p>
+                </div>
+                <ul class="gva__sub-list"> 
+                  <li class="gva__subitem"> 
+                    <h3 class="gva__service-name fs30">PHONE SUPPORT</h3>
+                  </li>
+                  <li class="gva__subitem"> 
+                    <h3 class="gva__service-name fs30">LIVE CHAT SUPPORT</h3>
+                  </li>
+                  <li class="gva__subitem"> 
+                    <h3 class="gva__service-name fs30">EMAIL SUPPORT</h3>
+                  </li>
+                </ul>
               </div>
-              <ul class="gva__sub-list"> 
-                <li class="gva__subitem"> 
-                  <h3 class="gva__service-name fs30">PHONE SUPPORT</h3>
-                </li>
-                <li class="gva__subitem"> 
-                  <h3 class="gva__service-name fs30">LIVE CHAT SUPPORT</h3>
-                </li>
-                <li class="gva__subitem"> 
-                  <h3 class="gva__service-name fs30">EMAIL SUPPORT</h3>
-                </li>
-              </ul>
             </div>
-          </div>
-          <div class="gva__item-image gva__item-image--row"> <img src="./img/mv-bg.jpg" alt=""></div>
-          <div class="gva__item"> 
-            <div class="gva__icon"> <img src="./img/hex-icon-email.png" alt=""></div>
-            <div class="gva__content-wrap"> 
-              <div class="gva__title-wrap"> 
-                <h2 class="gva__service-name">EMAIL MANAGEMENT</h2>
-                <p class="gva__service-desc pdl40">Let us handle the influx of emails by organizing, prioritizing, and responding to messages.</p>
+            <div class="gva__item-image gva__item-image--row"> <img src="./img/mv-bg.jpg" alt=""></div>
+            <div class="gva__item"> 
+              <div class="gva__icon"> <img src="./img/hex-icon-email.png" alt=""></div>
+              <div class="gva__content-wrap"> 
+                <div class="gva__title-wrap"> 
+                  <h2 class="gva__service-name">EMAIL MANAGEMENT</h2>
+                  <p class="gva__service-desc pdl40">Let us handle the influx of emails by organizing, prioritizing, and responding to messages.</p>
+                </div>
+                <ul class="gva__sub-list"> 
+                  <li class="gva__subitem"> 
+                    <h3 class="gva__service-name fs30">CLOUD ACCOUNT MANAGEMENT</h3>
+                    <p class="gva__service-desc pdl40">Launch and maintain cloud computing accounts such as DropBox, OneDrive, and GoogleDrive</p>
+                  </li>
+                  <li class="gva__subitem"> 
+                    <h3 class="gva__service-name fs30">TEAM SUPPORT</h3>
+                    <p class="gva__service-desc pdl40">Check and respond to emails <br>Check and respond to customer inquiries <br> Manage spam mail</p>
+                  </li>
+                  <li class="gva__subitem"> 
+                    <h3 class="gva__service-name fs30">CUSTOMER SUPPORT</h3>
+                    <p class="gva__service-desc pdl40">Organize Technical Support tickets <br> Assist in customer support</p>
+                  </li>
+                  <li class="gva__subitem"> 
+                    <h3 class="gva__service-name fs30">DOCUMENT MANAGEMENT</h3>
+                    <p class="gva__service-desc">Database building, entry, and updates <br> PDF management (converting, merging, and splitting files) <br> Composing documents from handwritten drafts, faxes, and dictations</p>
+                  </li>
+                  <li class="gva__subitem"> 
+                    <h3 class="gva__service-name fs30">CALENDAR MANAGEMENT</h3>
+                    <p class="gva__service-desc pdl40">Establish events <br> Update calendars for changes such as cancellations, postponements, or changes in venues <br> Manage events to prevent overlaps and ensure that enough time is allotted for planning</p>
+                  </li>
+                </ul>
               </div>
-              <ul class="gva__sub-list"> 
-                <li class="gva__subitem"> 
-                  <h3 class="gva__service-name fs30">CLOUD ACCOUNT MANAGEMENT</h3>
-                  <p class="gva__service-desc pdl40">Launch and maintain cloud computing accounts such as DropBox, OneDrive, and GoogleDrive</p>
-                </li>
-                <li class="gva__subitem"> 
-                  <h3 class="gva__service-name fs30">TEAM SUPPORT</h3>
-                  <p class="gva__service-desc pdl40">Check and respond to emails <br>Check and respond to customer inquiries <br> Manage spam mail</p>
-                </li>
-                <li class="gva__subitem"> 
-                  <h3 class="gva__service-name fs30">CUSTOMER SUPPORT</h3>
-                  <p class="gva__service-desc pdl40">Organize Technical Support tickets <br> Assist in customer support</p>
-                </li>
-                <li class="gva__subitem"> 
-                  <h3 class="gva__service-name fs30">DOCUMENT MANAGEMENT</h3>
-                  <p class="gva__service-desc">Database building, entry, and updates <br> PDF management (converting, merging, and splitting files) <br> Composing documents from handwritten drafts, faxes, and dictations</p>
-                </li>
-                <li class="gva__subitem"> 
-                  <h3 class="gva__service-name fs30">CALENDAR MANAGEMENT</h3>
-                  <p class="gva__service-desc pdl40">Establish events <br> Update calendars for changes such as cancellations, postponements, or changes in venues <br> Manage events to prevent overlaps and ensure that enough time is allotted for planning</p>
-                </li>
-              </ul>
+              <div class="gva__item-image gva__item-image--column"> <img src="./img/mv-bg.jpg" alt=""></div>
             </div>
-            <div class="gva__item-image gva__item-image--column"> <img src="./img/mv-bg.jpg" alt=""></div>
-          </div>
-          <div class="gva__item"> 
-            <div class="gva__icon"> <img src="./img/hex-icon-content.png" alt=""></div>
-            <div class="gva__content-wrap"> 
-              <div class="gva__title-wrap"> 
-                <h2 class="gva__service-name">SOCIAL MEDIA MANAGEMENT</h2>
-                <p class="gva__service-desc">WeR VAs will help your customers find the solutions they need on different platforms. </p>
+            <div class="gva__item"> 
+              <div class="gva__icon"> <img src="./img/hex-icon-content.png" alt=""></div>
+              <div class="gva__content-wrap"> 
+                <div class="gva__title-wrap"> 
+                  <h2 class="gva__service-name">SOCIAL MEDIA MANAGEMENT</h2>
+                  <p class="gva__service-desc">WeR VAs will help your customers find the solutions they need on different platforms. </p>
+                </div>
+                <ul class="gva__sub-list"> 
+                  <li class="gva__subitem"> 
+                    <h3 class="gva__service-name fs30">PHONE SUPPORT</h3>
+                  </li>
+                  <li class="gva__subitem"> 
+                    <h3 class="gva__service-name fs30">LIVE CHAT SUPPORT</h3>
+                  </li>
+                  <li class="gva__subitem"> 
+                    <h3 class="gva__service-name fs30">EMAIL SUPPORT</h3>
+                  </li>
+                </ul>
               </div>
-              <ul class="gva__sub-list"> 
-                <li class="gva__subitem"> 
-                  <h3 class="gva__service-name fs30">PHONE SUPPORT</h3>
-                </li>
-                <li class="gva__subitem"> 
-                  <h3 class="gva__service-name fs30">LIVE CHAT SUPPORT</h3>
-                </li>
-                <li class="gva__subitem"> 
-                  <h3 class="gva__service-name fs30">EMAIL SUPPORT</h3>
-                </li>
-              </ul>
             </div>
-          </div>
-          <div class="gva__item-image gva__item-image--row"> <img src="./img/mv-bg.jpg" alt=""></div>
-          <div class="gva__item"> 
-            <div class="gva__icon"> <img src="./img/hex-icon-pen.png" alt=""></div>
-            <div class="gva__content-wrap"> 
-              <div class="gva__title-wrap"> 
-                <h2 class="gva__service-name">CONTENT WRITING</h2>
-                <p class="gva__service-desc">WeR VAs will help your customers find the solutions they need on different platforms. </p>
+            <div class="gva__item-image gva__item-image--row"> <img src="./img/mv-bg.jpg" alt=""></div>
+            <div class="gva__item"> 
+              <div class="gva__icon"> <img src="./img/hex-icon-pen.png" alt=""></div>
+              <div class="gva__content-wrap"> 
+                <div class="gva__title-wrap"> 
+                  <h2 class="gva__service-name">CONTENT WRITING</h2>
+                  <p class="gva__service-desc">WeR VAs will help your customers find the solutions they need on different platforms. </p>
+                </div>
+                <ul class="gva__sub-list"> 
+                  <li class="gva__subitem"> 
+                    <h3 class="gva__service-name fs30">CLOUD ACCOUNT MANAGEMENT</h3>
+                    <p class="gva__service-desc pdl40">Launch and maintain cloud computing accounts such as DropBox, OneDrive, and GoogleDrive</p>
+                  </li>
+                  <li class="gva__subitem"> 
+                    <h3 class="gva__service-name fs30">TEAM SUPPORT</h3>
+                    <p class="gva__service-desc pdl40">Check and respond to emails <br>Check and respond to customer inquiries <br> Manage spam mail</p>
+                  </li>
+                  <li class="gva__subitem"> 
+                    <h3 class="gva__service-name fs30">CUSTOMER SUPPORT</h3>
+                    <p class="gva__service-desc pdl40">Organize Technical Support tickets <br> Assist in customer support</p>
+                  </li>
+                  <li class="gva__subitem"> 
+                    <h3 class="gva__service-name fs30">DOCUMENT MANAGEMENT</h3>
+                    <p class="gva__service-desc">Database building, entry, and updates <br> PDF management (converting, merging, and splitting files) <br> Composing documents from handwritten drafts, faxes, and dictations</p>
+                  </li>
+                  <li class="gva__subitem"> 
+                    <h3 class="gva__service-name fs30">CALENDAR MANAGEMENT</h3>
+                    <p class="gva__service-desc pdl40">Establish events <br> Update calendars for changes such as cancellations, postponements, or changes in venues <br> Manage events to prevent overlaps and ensure that enough time is allotted for planning</p>
+                  </li>
+                </ul>
               </div>
-              <ul class="gva__sub-list"> 
-                <li class="gva__subitem"> 
-                  <h3 class="gva__service-name fs30">CLOUD ACCOUNT MANAGEMENT</h3>
-                  <p class="gva__service-desc pdl40">Launch and maintain cloud computing accounts such as DropBox, OneDrive, and GoogleDrive</p>
-                </li>
-                <li class="gva__subitem"> 
-                  <h3 class="gva__service-name fs30">TEAM SUPPORT</h3>
-                  <p class="gva__service-desc pdl40">Check and respond to emails <br>Check and respond to customer inquiries <br> Manage spam mail</p>
-                </li>
-                <li class="gva__subitem"> 
-                  <h3 class="gva__service-name fs30">CUSTOMER SUPPORT</h3>
-                  <p class="gva__service-desc pdl40">Organize Technical Support tickets <br> Assist in customer support</p>
-                </li>
-                <li class="gva__subitem"> 
-                  <h3 class="gva__service-name fs30">DOCUMENT MANAGEMENT</h3>
-                  <p class="gva__service-desc">Database building, entry, and updates <br> PDF management (converting, merging, and splitting files) <br> Composing documents from handwritten drafts, faxes, and dictations</p>
-                </li>
-                <li class="gva__subitem"> 
-                  <h3 class="gva__service-name fs30">CALENDAR MANAGEMENT</h3>
-                  <p class="gva__service-desc pdl40">Establish events <br> Update calendars for changes such as cancellations, postponements, or changes in venues <br> Manage events to prevent overlaps and ensure that enough time is allotted for planning</p>
-                </li>
-              </ul>
+              <div class="gva__item-image gva__item-image--column"> <img src="./img/mv-bg.jpg" alt=""></div>
             </div>
-            <div class="gva__item-image gva__item-image--column"> <img src="./img/mv-bg.jpg" alt=""></div>
           </div>
         </div>
       </div>
