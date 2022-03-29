@@ -56,12 +56,12 @@ svg {
 }
 
 .main {
-  background-image: url("./img/body-bg.png");
+  background-image: url("./img//body-bg.png");
   background-size: cover;
   background-attachment: fixed;
 }
 .main--white {
-  background-image: url("./img/body-bg-white.png");
+  background-image: url("./img//body-bg-white.png");
 }
 
 .btn {
@@ -89,7 +89,7 @@ svg {
   position: absolute;
   width: 100%;
   height: 100%;
-  background-image: url("./img/btn-shape.png");
+  background-image: url("./img//btn-shape.png");
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
@@ -102,7 +102,7 @@ svg {
   position: absolute;
   width: 100%;
   height: 100%;
-  background-image: url("./img/btn-shape-hover.png");
+  background-image: url("./img//btn-shape-hover.png");
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
@@ -127,7 +127,7 @@ svg {
   content: "";
   position: absolute;
   inset: 0;
-  background-image: url("./img/btn-shape.png");
+  background-image: url("./img//btn-shape.png");
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
@@ -139,7 +139,7 @@ svg {
   content: "";
   position: absolute;
   inset: 0;
-  background-image: url("./img/btn-shape-hover.png");
+  background-image: url("./img//btn-shape-hover.png");
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
@@ -734,7 +734,7 @@ svg {
 .services__item {
   max-width: 472px;
   width: 28.6458333333vw;
-  background-image: url("./img/hex-main.png");
+  background-image: url("./img//hex-main.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
@@ -756,7 +756,7 @@ svg {
   max-width: 279px;
   width: 15.625vw;
   height: 16.4583333333vw;
-  background-image: url("./img/hex-secondary.png");
+  background-image: url("./img//hex-secondary.png");
   background-position: center;
   flex-shrink: 0;
   background-color: transparent;
@@ -776,7 +776,7 @@ svg {
   width: 14.53125vw;
   padding: 40px 10%;
   inset: 0;
-  background-image: url("./img/hex-main-small.png");
+  background-image: url("./img//hex-main-small.png");
   background-position: center;
   opacity: 0;
   transform: translateY(50px);
@@ -921,7 +921,7 @@ svg {
   position: absolute;
   max-width: 57px;
   width: 2.96875vw;
-  background-image: url("./img/indicator-active.png");
+  background-image: url("./img//indicator-active.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
@@ -987,7 +987,7 @@ svg {
   content: "";
   position: absolute;
   inset: 0;
-  background-image: url("./img/icon-arrow.png");
+  background-image: url("./img//icon-arrow.png");
   background-size: 50px;
   background-repeat: no-repeat;
   background-position: center;
@@ -1231,7 +1231,6 @@ svg {
 }
 .modal__item {
   position: absolute;
-  top: 0;
   max-width: 1200px;
   text-align: center;
   align-items: center;
@@ -1247,6 +1246,9 @@ svg {
 }
 .modal__item.active {
   display: flex;
+}
+.modal__item--about {
+  top: 0;
 }
 @media screen and (max-width: 767px) {
   .modal__item--about {
@@ -1573,7 +1575,7 @@ svg {
   top: 0;
   width: 45px;
   height: 51px;
-  background: url("./img/hex-small.png");
+  background: url("./img//hex-small.png");
   background-size: cover;
 }
 @media screen and (max-width: 767px) {
