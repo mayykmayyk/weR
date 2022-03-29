@@ -117,7 +117,7 @@ parcelRequire = (function (modules, cache, entry, globalName) {
   }
 
   return newRequire;
-})({"js/components/forEachPolyfill.ts":[function(require,module,exports) {
+})({"Y661":[function(require,module,exports) {
 "use strict";
 /**
 * Foreach polyfill for browsers
@@ -140,7 +140,7 @@ var foreachPolyfill = function foreachPolyfill() {
 };
 
 exports.default = foreachPolyfill;
-},{}],"js/components/hamburger.ts":[function(require,module,exports) {
+},{}],"hXqA":[function(require,module,exports) {
 "use strict";
 /**
 * hamburger button
@@ -163,7 +163,7 @@ var hamburger = function hamburger() {
 };
 
 exports.default = hamburger;
-},{}],"js/components/headerScroll.ts":[function(require,module,exports) {
+},{}],"ffDl":[function(require,module,exports) {
 "use strict";
 /**
 * Foreach polyfill for browsers
@@ -188,7 +188,7 @@ var headerScroll = function headerScroll() {
 };
 
 exports.default = headerScroll;
-},{}],"js/components/modal.ts":[function(require,module,exports) {
+},{}],"lb5P":[function(require,module,exports) {
 "use strict";
 /**
 * Modal set up and settings
@@ -205,12 +205,13 @@ var modal = function modal() {
   var serviceBtn = document.querySelectorAll('.js-service-button');
   var body = document.querySelector('body');
   var html = document.querySelector('html');
+  var teamBtn = document.querySelectorAll('.team__item');
 
   if (modal && btn && modalItem && serviceBtn && body && html) {
     for (var i = 0; i < serviceBtn.length; i++) {
       serviceBtn[i].onmousedown = function () {
         modal.classList.add('active');
-        modalItem[this.value].classList.add('active');
+        modalItem[this.dataset.value].classList.add('active');
         body.style.overflow = 'hidden';
         html.style.overflow = 'hidden';
       };
@@ -224,6 +225,17 @@ var modal = function modal() {
         item.classList.remove('active');
       });
     };
+  }
+
+  if (modal && btn && modalItem && teamBtn && body && html) {
+    for (var _i = 0; _i < teamBtn.length; _i++) {
+      teamBtn[_i].onmousedown = function () {
+        modal.classList.add('active');
+        modalItem[this.dataset.value].classList.add('active');
+        body.style.overflow = 'hidden';
+        html.style.overflow = 'hidden';
+      };
+    }
   }
 };
 
@@ -305,7 +317,7 @@ var steps = function steps() {
 };
 
 exports.default = steps;
-},{}],"js/index.ts":[function(require,module,exports) {
+},{}],"Rgmk":[function(require,module,exports) {
 "use strict";
 
 var __importDefault = this && this.__importDefault || function (mod) {
@@ -335,5 +347,5 @@ document.addEventListener('DOMContentLoaded', function () {
   hamburger_1.default();
   modal_1.default();
 }, false);
-},{"./components/forEachPolyfill":"js/components/forEachPolyfill.ts","./components/hamburger":"js/components/hamburger.ts","./components/headerScroll":"js/components/headerScroll.ts","./components/modal":"js/components/modal.ts","./components/steps":"HJva"}]},{},["js/index.ts"], null)
+},{"./components/forEachPolyfill":"Y661","./components/hamburger":"hXqA","./components/headerScroll":"ffDl","./components/modal":"lb5P","./components/steps":"HJva"}]},{},["Rgmk"], null)
 //# sourceMappingURL=/js/index.js.map
